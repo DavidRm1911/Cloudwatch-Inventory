@@ -1,0 +1,60 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "CloudWatchReadPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:DescribeAlarms",
+                "cloudwatch:DescribeAlarmsForMetric",
+                "cloudwatch:ListTagsForResource",
+                "cloudwatch:GetMetricStatistics",
+                "cloudwatch:ListMetrics"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:RequestedRegion": ["us-east-1", "us-west-2"]
+                }
+            }
+        },
+        {
+            "Sid": "EC2ReadPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:DescribeInstanceStatus",
+                "ec2:DescribeTags"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "RDSReadPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "rds:DescribeDBInstances",
+                "rds:DescribeDBClusters",
+                "rds:ListTagsForResource"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "LogsReadPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "logs:DescribeLogGroups",
+                "logs:ListTagsForResource"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "SNSReadPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "sns:GetTopicAttributes",
+                "sns:ListTopics"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
