@@ -1,5 +1,11 @@
 # CloudWatch Alarms Multi-Account Inventory
 
+![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat&logo=awslambda&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python&logoColor=ffdd54)
+![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F00?style=flat&logo=amazonaws&logoColor=white)
+![S3](https://img.shields.io/badge/S3-569A31?style=flat&logo=amazons3&logoColor=white)
+![IAM](https://img.shields.io/badge/IAM-DD344C?style=flat&logo=amazonaws&logoColor=white)
+
 ## Overview
 
 This project provides an AWS Lambda function that inventories CloudWatch alarms across multiple AWS accounts and regions, exporting the results to a formatted Excel report stored in Amazon S3.
